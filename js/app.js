@@ -42,22 +42,5 @@ function animateDice(){
 }
 
 
-// function checkAdviceBox(){
-//   // if(adviceText.length == 0){
-//   //   console.log("Esta vacio");
-//   // } else {
-//   //   console.log("Esta lleno");
-//   // }
-//   if(adviceText.innerHTML.trim().length === 0) {
-//     console.log("Esta vacio");
-//     callApi();
-//   } else {
-//     console.log("Esta lleno");
-//     spinner.classList.add("hide");
-//   } 
-  
-// }
-
-// checkAdviceBox();
 
 
