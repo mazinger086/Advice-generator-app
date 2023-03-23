@@ -29,6 +29,7 @@ html {
  }
 
  .center {
+    display: flex;
     text-align: center;
  }
 
@@ -70,11 +71,12 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     /* min-width: 350px; */
+    min-height: 350px;
     border-radius: 15px;
     background-color: var(--Dark_Grayish_Blue);
-    padding: 40px 25px 60px 25px;
+    padding: 40px 25px 40px 25px;
 }
 
 .card h1 {
@@ -85,14 +87,19 @@ html {
     margin-bottom: 30px;
 }
 
-.card .spinner {     
+.spinner {
+    position: absolute;       
     border: 4px solid rgba(0, 0, 0, .1);
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    top: 35%;
     border-radius: 50%;   
     border-left-color: var(--Neon_Green);
-
     animation: spin 1s ease infinite;
+}
+
+.diceSpin {
+    animation: spin 1s ease-in infinite;
 }
 
 @keyframes spin {
@@ -116,7 +123,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;      
+    width: 100%;
+    margin-bottom: 20px;      
 }
 
 .desktop {
@@ -152,5 +160,6 @@ html {
     bottom: -30px;
     border-radius: 50%;
     background-color: var(--Neon_Green);
+    cursor: pointer;
 }
 
