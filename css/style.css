@@ -33,9 +33,7 @@ html {
     text-align: center;
  }
 
- .hide {
-    display: none;
- }
+ 
 
  body {
     display: flex;
@@ -96,6 +94,7 @@ html {
     border-radius: 50%;   
     border-left-color: var(--Neon_Green);
     animation: spin 1s ease infinite;
+    display: none;
 }
 
 .diceSpin {

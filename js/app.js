@@ -4,19 +4,20 @@ const spinner = document.querySelector('.spinner');
 const dice = document.querySelector('.dice');
 const diceImg = document.querySelector('.dice img');
 
+callApi();
 
 dice.addEventListener('click', ()=>{ 
   animateDice();
   setTimeout(()=>{    
     adviceText.style.display = 'flex';
-    adviceId.style.display = 'flex';
-    spinner.classList.add("hide");
+    adviceId.style.display = 'flex';    
+    spinner.style.display = "none";
   }, 2000);
    
   callApi(); 
   adviceText.style.display = 'none';
-  adviceId.style.display = 'none';
-  spinner.classList.remove("hide");
+  adviceId.style.display = 'none';  
+  spinner.style.display = "block"
 })
 
 async function advices(){
@@ -29,7 +30,7 @@ async function advices(){
 function callApi(){  
   advices()
   .then(data => {  
-    adviceId.innerText = `# ${data.id}`;       
+    adviceId.innerText = `${data.id}`;       
     adviceText.innerHTML = `&#8220;${data.advice}&#8221;`; 
   })  
 }
